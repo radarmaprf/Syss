@@ -289,10 +289,10 @@ def send_telegram_message(text: str, chat_id=None):
             time.sleep(2)
     print("Не удалось отправить сообщение после 3 попыток")
 
-# ---------- НОВЫЙ СТИЛЬ ОТПРАВКИ ----------
+# ---------- НОВЫЙ СТИЛЬ ОТПРАВКИ (без кнопки "Источник") ----------
 def send_pending_changes(pending_changes: Dict[Tuple[str, str], Tuple[int, bool]], previous_state: Dict[str, Dict]):
     """
-    Отправляет все изменения в красивом оформлении, с эмодзи, временем и ссылкой на пост.
+    Отправляет все изменения в красивом оформлении, с эмодзи и временем.
     """
     if not pending_changes:
         return
@@ -301,10 +301,6 @@ def send_pending_changes(pending_changes: Dict[Tuple[str, str], Tuple[int, bool]
     sorted_changes = sorted(pending_changes.items(), key=lambda item: item[1][0])
 
     for (region, change_type), (post_id, new_value) in sorted_changes:
-        # Формируем ссылку на пост
-        post_link = f"https://t.me/{CHANNEL}/{post_id}" if CHANNEL else None
-
-        # Базовое оформление
         time_str = get_moscow_time()
 
         if change_type == 'rocket':
@@ -354,9 +350,7 @@ def send_pending_changes(pending_changes: Dict[Tuple[str, str], Tuple[int, bool]
         else:
             continue
 
-        # Добавляем разделитель и ссылку на пост (если есть)
-        if post_link:
-            msg += f"\n🔗 <a href='{post_link}'>Источник</a>"
+        # Добавляем разделитель (без ссылки)
         msg += "\n——————————————————"
 
         send_telegram_message(msg)
