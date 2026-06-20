@@ -93,6 +93,17 @@ for ign in IGNORED_REGIONS:
 ALERTS_FILE = "alerts.json"
 PROCESSED_POSTS_FILE = "processed_posts.json"
 
+# ---------- ОБЕСПЕЧИВАЕМ НАЛИЧИЕ ФАЙЛОВ ----------
+def ensure_files_exist():
+    if not os.path.exists(ALERTS_FILE):
+        with open(ALERTS_FILE, 'w', encoding='utf-8') as f:
+            json.dump({"regions": {}}, f, ensure_ascii=False, indent=2)
+        print(f"[{datetime.now().isoformat()}] Создан {ALERTS_FILE}")
+    if not os.path.exists(PROCESSED_POSTS_FILE):
+        with open(PROCESSED_POSTS_FILE, 'w', encoding='utf-8') as f:
+            json.dump([], f)
+        print(f"[{datetime.now().isoformat()}] Создан {PROCESSED_POSTS_FILE}")
+
 # ---------- ФУНКЦИИ ДЛЯ РАБОТЫ С ФАЙЛАМИ ----------
 def load_previous_state() -> Dict[str, Dict]:
     try:
@@ -244,15 +255,18 @@ def apply_timeout(state: Dict[str, Dict]):
             except Exception as e:
                 print(f"Ошибка разбора времени для {region}: {e}")
 
-# ---------- ФУНКЦИЯ ОТПРАВКИ В TELEGRAM (используется только для уведомлений об изменениях) ----------
+# ---------- ФУНКЦИЯ ОТПРАВКИ В TELEGRAM ----------
 def send_telegram_message(text: str, chat_id=None):
-    """Отправляет сообщение в Telegram."""
     if chat_id is None:
         chat_id = os.getenv("CHAT_ID")
         if not chat_id:
             print("CHAT_ID не задан, сообщение не отправлено")
             return
-    url = f"https://api.telegram.org/bot{os.getenv('BOT_TOKEN')}/sendMessage"
+    bot_token = os.getenv("BOT_TOKEN")
+    if not bot_token:
+        print("BOT_TOKEN не задан")
+        return
+    url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
     payload = {
         "chat_id": chat_id,
         "text": text,
@@ -302,6 +316,9 @@ def send_status_updates(previous_state: Dict[str, Dict], new_state: Dict[str, Di
 
 # ---------- ГЛАВНАЯ ФУНКЦИЯ compute_status ----------
 def compute_status() -> Dict[str, Dict]:
+    # Гарантируем, что файлы существуют
+    ensure_files_exist()
+
     previous_state = load_previous_state()
     processed_posts = load_processed_posts()
 
@@ -340,7 +357,6 @@ def compute_status() -> Dict[str, Dict]:
                 status[region]["droneDanger"] = False
                 if "droneAlert_time" in status[region]:
                     del status[region]["droneAlert_time"]
-            # Отправляем одно общее сообщение о глобальном отбое
             send_telegram_message("🌐 <b>Глобальный отбой угрозы БПЛА во всех регионах!</b>")
             new_processed.add(pid)
             continue
@@ -394,3 +410,11 @@ def compute_status() -> Dict[str, Dict]:
     save_processed_posts(new_processed)
 
     return status
+
+# ---------- ТОЧКА ВХОДА ДЛЯ ЗАПУСКА ----------
+if __name__ == "__main__":
+    # Если запускается как скрипт, выполняем парсинг
+    print("Запуск парсинга...")
+    status = compute_status()
+    save_alerts(status)
+    print("Парсинг завершён.")
