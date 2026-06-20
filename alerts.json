@@ -1,0 +1,325 @@
+{
+  "last_updated": "2026-06-20T09:09:29.345207+00:00",
+  "regions": {
+    "Московская область": {
+      "rocket": false,
+      "droneAlert": true,
+      "droneDanger": false,
+      "droneAlert_time": "2026-06-20T09:07:14.449988+00:00"
+    },
+    "Санкт-Петербург": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Ленинградская область": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Белгородская область": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Брянская область": {
+      "rocket": false,
+      "droneAlert": true,
+      "droneDanger": false,
+      "droneAlert_time": "2026-06-20T09:07:14.449372+00:00"
+    },
+    "Владимирская область": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": true
+    },
+    "Воронежская область": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Ивановская область": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": true
+    },
+    "Калужская область": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Костромская область": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Курская область": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Липецкая область": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Нижегородская область": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": true
+    },
+    "Новгородская область": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Орловская область": {
+      "rocket": false,
+      "droneAlert": true,
+      "droneDanger": false,
+      "droneAlert_time": "2026-06-20T09:07:14.449576+00:00"
+    },
+    "Пензенская область": {
+      "rocket": false,
+      "droneAlert": true,
+      "droneDanger": false,
+      "droneAlert_time": "2026-06-20T09:07:14.454249+00:00"
+    },
+    "Псковская область": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Рязанская область": {
+      "rocket": false,
+      "droneAlert": true,
+      "droneDanger": false,
+      "droneAlert_time": "2026-06-20T09:07:14.455451+00:00"
+    },
+    "Смоленская область": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": true
+    },
+    "Тамбовская область": {
+      "rocket": false,
+      "droneAlert": true,
+      "droneDanger": false,
+      "droneAlert_time": "2026-06-20T09:07:14.455360+00:00"
+    },
+    "Тверская область": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": true
+    },
+    "Тульская область": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": true
+    },
+    "Ярославская область": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Краснодарский край": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Ставропольский край": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Ростовская область": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Волгоградская область": {
+      "rocket": false,
+      "droneAlert": true,
+      "droneDanger": false,
+      "droneAlert_time": "2026-06-20T09:07:14.454341+00:00"
+    },
+    "Татарстан": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Башкортостан": {
+      "rocket": false,
+      "droneAlert": true,
+      "droneDanger": false,
+      "droneAlert_time": "2026-06-20T09:07:14.453116+00:00"
+    },
+    "Марий Эл": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Чувашия": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Республика Мордовия": {
+      "rocket": false,
+      "droneAlert": true,
+      "droneDanger": false,
+      "droneAlert_time": "2026-06-20T09:07:14.450642+00:00"
+    },
+    "Удмуртская Республика": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Самарская область": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Саратовская область": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Ульяновская область": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Свердловская область": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": true
+    },
+    "Челябинская область": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": true
+    },
+    "Оренбургская область": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Пермский край": {
+      "rocket": false,
+      "droneAlert": true,
+      "droneDanger": false,
+      "droneAlert_time": "2026-06-20T09:07:14.453209+00:00"
+    },
+    "Новосибирская область": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Томская область": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Кемеровская область": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Иркутская область": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Красноярский край": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Алтайский край": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Забайкальский край": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Приморский край": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Хабаровский край": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Амурская область": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Сахалинская область": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Магаданская область": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Камчатский край": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Мурманская область": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Крым": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Дагестан": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Республика Карелия": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Республика Коми": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Республика Саха (Якутия)": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "ХМАО": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "ЯНАО": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    },
+    "Адыгея": {
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
+    }
+  }
+}
