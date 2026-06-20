@@ -91,6 +91,13 @@ for ign in IGNORED_REGIONS:
 ALERTS_FILE = "alerts.json"
 PROCESSED_POSTS_FILE = "processed_posts.json"
 
+# ---------- ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ ----------
+def get_moscow_time():
+    """Возвращает текущее время в Москве (UTC+3) в формате ЧЧ:ММ (МСК)"""
+    moscow_tz = timezone(timedelta(hours=3))
+    now = datetime.now(moscow_tz)
+    return now.strftime("%H:%M")
+
 def ensure_files_exist():
     if not os.path.exists(ALERTS_FILE):
         with open(ALERTS_FILE, 'w', encoding='utf-8') as f:
@@ -145,6 +152,7 @@ def save_processed_posts(processed_set: Set[int], max_size=500):
     with open(PROCESSED_POSTS_FILE, "w", encoding="utf-8") as f:
         json.dump(posts_list, f, ensure_ascii=False, indent=2)
 
+# ---------- ПАРСИНГ ----------
 def fetch_page(url: str) -> str:
     for attempt in range(3):
         try:
@@ -250,6 +258,7 @@ def apply_timeout(state: Dict[str, Dict]):
             except Exception as e:
                 print(f"Ошибка разбора времени для {region}: {e}")
 
+# ---------- ОТПРАВКА СООБЩЕНИЙ ----------
 def send_telegram_message(text: str, chat_id=None):
     if chat_id is None:
         chat_id = os.getenv("CHAT_ID")
@@ -280,44 +289,80 @@ def send_telegram_message(text: str, chat_id=None):
             time.sleep(2)
     print("Не удалось отправить сообщение после 3 попыток")
 
-# ---------- НОВАЯ ЛОГИКА ОТПРАВКИ ИЗМЕНЕНИЙ В ХРОНОЛОГИЧЕСКОМ ПОРЯДКЕ ----------
+# ---------- НОВЫЙ СТИЛЬ ОТПРАВКИ ----------
 def send_pending_changes(pending_changes: Dict[Tuple[str, str], Tuple[int, bool]], previous_state: Dict[str, Dict]):
     """
-    pending_changes: ключ (region, change_type) -> (post_id, new_value)
-    change_type: 'rocket', 'droneAlert', 'droneDanger'
-    Отправляем все изменения, отсортированные по post_id.
-    При этом учитываем предыдущее состояние, чтобы не отправлять изменения,
-    которые уже были такими (но это учтено при добавлении).
+    Отправляет все изменения в красивом оформлении, с эмодзи, временем и ссылкой на пост.
     """
     if not pending_changes:
         return
-    
+
     # Сортируем по post_id
     sorted_changes = sorted(pending_changes.items(), key=lambda item: item[1][0])
-    
+
     for (region, change_type), (post_id, new_value) in sorted_changes:
+        # Формируем ссылку на пост
+        post_link = f"https://t.me/{CHANNEL}/{post_id}" if CHANNEL else None
+
+        # Базовое оформление
+        time_str = get_moscow_time()
+
         if change_type == 'rocket':
             if new_value:
-                msg = f"🚨 На территории <b>{region}</b> объявлена <b>ракетная опасность</b>! Просьба не паниковать."
+                msg = (
+                    f"🚨🚨🚨 <b>РАКЕТНАЯ ОПАСНОСТЬ</b> 🚨🚨🚨\n"
+                    f"📍 <b>Регион:</b> {region}\n"
+                    f"🕒 <b>Время:</b> {time_str} (МСК)\n"
+                    f"📢 Просьба не паниковать!\n"
+                )
             else:
-                msg = f"✅ Отбой ракетной опасности в <b>{region}</b>."
+                msg = (
+                    f"✅✅✅ <b>ОТБОЙ РАКЕТНОЙ ОПАСНОСТИ</b> ✅✅✅\n"
+                    f"📍 <b>Регион:</b> {region}\n"
+                    f"🕒 <b>Время:</b> {time_str} (МСК)\n"
+                    f"Ситуация стабилизирована.\n"
+                )
         elif change_type == 'droneAlert':
             if new_value:
-                msg = f"🛸 В <b>{region}</b> зафиксирована работа ПВО / БПЛА (фиксация). Будьте внимательны."
+                msg = (
+                    f"🛸🛸🛸 <b>ФИКСАЦИЯ БПЛА / РАБОТА ПВО</b> 🛸🛸🛸\n"
+                    f"📍 <b>Регион:</b> {region}\n"
+                    f"🕒 <b>Время:</b> {time_str} (МСК)\n"
+                    f"⚠️ Будьте внимательны!\n"
+                )
             else:
-                msg = f"✅ Снята фиксация БПЛА в <b>{region}</b>."
+                msg = (
+                    f"✅✅✅ <b>СНЯТА ФИКСАЦИЯ БПЛА</b> ✅✅✅\n"
+                    f"📍 <b>Регион:</b> {region}\n"
+                    f"🕒 <b>Время:</b> {time_str} (МСК)\n"
+                )
         elif change_type == 'droneDanger':
             if new_value:
-                msg = f"⚠️ В <b>{region}</b> объявлена <b>угроза БПЛА</b>! Примите меры предосторожности."
+                msg = (
+                    f"⚠️⚠️⚠️ <b>УГРОЗА БПЛА</b> ⚠️⚠️⚠️\n"
+                    f"📍 <b>Регион:</b> {region}\n"
+                    f"🕒 <b>Время:</b> {time_str} (МСК)\n"
+                    f"🔴 Примите меры предосторожности!\n"
+                )
             else:
-                msg = f"✅ Отбой угрозы БПЛА в <b>{region}</b>."
+                msg = (
+                    f"✅✅✅ <b>ОТБОЙ УГРОЗЫ БПЛА</b> ✅✅✅\n"
+                    f"📍 <b>Регион:</b> {region}\n"
+                    f"🕒 <b>Время:</b> {time_str} (МСК)\n"
+                    f"Угроза миновала.\n"
+                )
         else:
             continue
-        
-        send_telegram_message(msg)
-        print(f"Отправлено: {msg} (post_id={post_id})")
 
-# ---------- ГЛАВНАЯ ФУНКЦИЯ compute_status ----------
+        # Добавляем разделитель и ссылку на пост (если есть)
+        if post_link:
+            msg += f"\n🔗 <a href='{post_link}'>Источник</a>"
+        msg += "\n——————————————————"
+
+        send_telegram_message(msg)
+        print(f"Отправлено: {msg.replace(chr(10), ' ')} (post_id={post_id})")
+
+# ---------- ГЛАВНАЯ ФУНКЦИЯ ----------
 def compute_status() -> Dict[str, Dict]:
     ensure_files_exist()
     
@@ -387,7 +432,6 @@ def compute_status() -> Dict[str, Dict]:
                         status[reg]["rocket"] = False
                         pending_changes[(reg, 'rocket')] = (pid, False)
                 elif subtype == 'drone':
-                    # Отбой только БПЛА (снимаем оба флага)
                     old_alert = status[reg].get("droneAlert", False)
                     old_danger = status[reg].get("droneDanger", False)
                     if old_alert != False:
@@ -399,7 +443,6 @@ def compute_status() -> Dict[str, Dict]:
                         status[reg]["droneDanger"] = False
                         pending_changes[(reg, 'droneDanger')] = (pid, False)
                 elif subtype == 'all':
-                    # Отбой всего
                     old_rocket = status[reg].get("rocket", False)
                     old_alert = status[reg].get("droneAlert", False)
                     old_danger = status[reg].get("droneDanger", False)
@@ -430,7 +473,7 @@ def compute_status() -> Dict[str, Dict]:
                         status[reg]["droneDanger"] = False
                         status[reg]["droneAlert_time"] = datetime.now(timezone.utc).isoformat()
                         pending_changes[(reg, 'droneAlert')] = (pid, True)
-                        # Если был droneDanger, то снимаем его
+                        # Если был droneDanger, снимаем его
                         if status[reg].get("droneDanger", False):
                             status[reg]["droneDanger"] = False
                             pending_changes[(reg, 'droneDanger')] = (pid, False)
@@ -450,16 +493,10 @@ def compute_status() -> Dict[str, Dict]:
             # Не распознано – помечаем как обработанное
             new_processed.add(pid)
     
-    # Применяем тайм-аут (может изменить статус)
-    # Но тайм-аут не должен генерировать новые уведомления, так как он уже был обработан ранее?
-    # Лучше применять тайм-аут к конечному состоянию, но не отправлять уведомления от него,
-    # потому что они уже были отправлены в прошлом запуске.
-    # Однако мы можем применить и добавить изменения, если они не были учтены.
-    # Но проще не добавлять уведомления от тайм-аута, так как это автоматический переход.
-    # Мы просто применим его, но без отправки.
+    # Применяем тайм-аут (автоматически, без отправки уведомлений)
     apply_timeout(status)
     
-    # Теперь отправляем все накопленные изменения в хронологическом порядке
+    # Отправляем все накопленные изменения в хронологическом порядке
     send_pending_changes(pending_changes, previous_state)
     
     # Сохраняем состояние и обработанные посты
