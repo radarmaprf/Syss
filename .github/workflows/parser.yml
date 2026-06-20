@@ -1,20 +1,18 @@
-name: Telegram Alerts Parser
+name: Run Parser
 
 on:
   schedule:
-    # Запуск каждые 5 минут (можно изменить интервал)
     - cron: '*/5 * * * *'
-  workflow_dispatch:  # Позволяет запускать вручную из вкладки Actions
+  workflow_dispatch:
 
 jobs:
   parse:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
         with:
-          persist-credentials: false  # Чтобы использовать PAT для push
+          persist-credentials: false
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -24,16 +22,25 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run parser
+      - name: Run bot
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
           CHAT_ID: ${{ secrets.CHAT_ID }}
         run: python bot.py
 
-      - name: Commit and push state files (alerts.json, processed_posts.json)
+      - name: Commit and push state files
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add alerts.json processed_posts.json
+          
+          # Подтягиваем последние изменения из удалённой ветки (чтобы избежать конфликтов)
+          git pull --rebase origin main || true
+          
+          # Добавляем файлы состояния (даже если они игнорируются)
+          git add -f alerts.json processed_posts.json
+          
+          # Если есть изменения – коммитим
           git diff --staged --quiet || git commit -m "Update alert states [skip ci]"
-          git push https://${{ secrets.GH_PAT }}@github.com/${{ github.repository }}.git HEAD:mai
+          
+          # Отправляем изменения
+          git push https://${{ secrets.GH_PAT }}@github.com/${{ github.repository }}.git HEAD:main
