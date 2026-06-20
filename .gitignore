@@ -1,4 +1,4 @@
-.env
+# Игнорируем всё, кроме нужных JSON-файлов
 *.json
-__pycache__/
-*.pyc
+!alerts.json
+!processed_posts.json
