@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-22T09:01:11.283703+00:00",
+  "last_updated": "2026-06-22T09:05:47.845528+00:00",
   "regions": {
     "Московская область": {
       "rocket": true,
@@ -100,7 +100,7 @@
       "droneAlert_time": "2026-06-22T08:35:46.477439+00:00"
     },
     "Тамбовская область": {
-      "rocket": false,
+      "rocket": true,
       "droneAlert": false,
       "droneDanger": true
     },
@@ -143,7 +143,7 @@
       "droneDanger": true
     },
     "Татарстан": {
-      "rocket": false,
+      "rocket": true,
       "droneAlert": false,
       "droneDanger": false
     },
