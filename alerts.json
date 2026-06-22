@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-22T09:10:57.252280+00:00",
+  "last_updated": "2026-06-22T09:15:52.917437+00:00",
   "regions": {
     "Московская область": {
       "rocket": true,
@@ -35,7 +35,7 @@
       "rocket": true,
       "droneAlert": true,
       "droneDanger": false,
-      "droneAlert_time": "2026-06-22T09:10:48.941810+00:00"
+      "droneAlert_time": "2026-06-22T09:15:51.177133+00:00"
     },
     "Ивановская область": {
       "rocket": false,
@@ -59,7 +59,7 @@
       "droneDanger": true
     },
     "Липецкая область": {
-      "rocket": true,
+      "rocket": false,
       "droneAlert": false,
       "droneDanger": true
     },
