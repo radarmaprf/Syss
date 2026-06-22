@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-22T05:01:05.628066+00:00",
+  "last_updated": "2026-06-22T05:05:42.451063+00:00",
   "regions": {
     "Московская область": {
       "rocket": false,
@@ -110,9 +110,8 @@
     },
     "Тульская область": {
       "rocket": false,
-      "droneAlert": true,
-      "droneDanger": false,
-      "droneAlert_time": "2026-06-22T05:01:04.193576+00:00"
+      "droneAlert": false,
+      "droneDanger": true
     },
     "Ярославская область": {
       "rocket": false,
@@ -127,7 +126,7 @@
     "Ставропольский край": {
       "rocket": false,
       "droneAlert": false,
-      "droneDanger": false
+      "droneDanger": true
     },
     "Ростовская область": {
       "rocket": false,
