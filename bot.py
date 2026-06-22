@@ -10,7 +10,7 @@ from typing import Dict, List, Tuple, Set, Optional
 CHANNEL = "vrv_radar"
 BASE_URL = f"https://t.me/s/{CHANNEL}"
 POSTS_LIMIT = 200
-IGNORED_REGIONS = ["Астраханская область", "Архангельская область", "Омская область", "Курганская область", "Москва"]
+IGNORED_REGIONS = ["Астраханская область", "Архангельская область", "Омская область", "Курганская область", "Московская область"]
 
 STOP_WORDS = [
     "реклама", "подпишись", "подписаться", "каналы", "телеграм", "telegram",
