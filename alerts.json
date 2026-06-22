@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-22T05:05:42.451063+00:00",
+  "last_updated": "2026-06-22T05:10:49.970608+00:00",
   "regions": {
     "Московская область": {
       "rocket": false,
@@ -111,7 +111,7 @@
     "Тульская область": {
       "rocket": false,
       "droneAlert": false,
-      "droneDanger": true
+      "droneDanger": false
     },
     "Ярославская область": {
       "rocket": false,
@@ -121,12 +121,13 @@
     "Краснодарский край": {
       "rocket": false,
       "droneAlert": false,
-      "droneDanger": false
+      "droneDanger": true
     },
     "Ставропольский край": {
       "rocket": false,
-      "droneAlert": false,
-      "droneDanger": true
+      "droneAlert": true,
+      "droneDanger": false,
+      "droneAlert_time": "2026-06-22T05:10:43.793110+00:00"
     },
     "Ростовская область": {
       "rocket": false,
@@ -311,7 +312,7 @@
     "Адыгея": {
       "rocket": false,
       "droneAlert": false,
-      "droneDanger": false
+      "droneDanger": true
     }
   }
 }
