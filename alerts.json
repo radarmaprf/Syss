@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-22T09:05:47.845528+00:00",
+  "last_updated": "2026-06-22T09:10:57.252280+00:00",
   "regions": {
     "Московская область": {
       "rocket": true,
@@ -33,8 +33,9 @@
     },
     "Воронежская область": {
       "rocket": true,
-      "droneAlert": false,
-      "droneDanger": true
+      "droneAlert": true,
+      "droneDanger": false,
+      "droneAlert_time": "2026-06-22T09:10:48.941810+00:00"
     },
     "Ивановская область": {
       "rocket": false,
@@ -68,7 +69,7 @@
       "droneDanger": true
     },
     "Новгородская область": {
-      "rocket": false,
+      "rocket": true,
       "droneAlert": false,
       "droneDanger": false
     },
@@ -121,10 +122,9 @@
       "droneDanger": true
     },
     "Краснодарский край": {
-      "rocket": true,
-      "droneAlert": true,
-      "droneDanger": false,
-      "droneAlert_time": "2026-06-22T08:15:47.725795+00:00"
+      "rocket": false,
+      "droneAlert": false,
+      "droneDanger": false
     },
     "Ставропольский край": {
       "rocket": false,
@@ -313,7 +313,7 @@
       "droneDanger": false
     },
     "Адыгея": {
-      "rocket": true,
+      "rocket": false,
       "droneAlert": false,
       "droneDanger": true
     }
