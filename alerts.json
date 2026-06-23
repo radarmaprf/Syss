@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-23T07:21:13.443938+00:00",
+  "last_updated": "2026-06-23T07:26:06.742036+00:00",
   "regions": {
     "Москва": {
       "rocket": false,
@@ -72,7 +72,7 @@
       "droneDanger": false
     },
     "Орловская область": {
-      "rocket": true,
+      "rocket": false,
       "droneAlert": true,
       "droneDanger": false,
       "droneAlert_time": "2026-06-23T06:40:51.221373+00:00"
@@ -164,7 +164,7 @@
       "droneDanger": false
     },
     "Удмуртская Республика": {
-      "rocket": false,
+      "rocket": true,
       "droneAlert": false,
       "droneDanger": false
     },
