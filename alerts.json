@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-23T08:25:56.104636+00:00",
+  "last_updated": "2026-06-23T08:31:13.322379+00:00",
   "regions": {
     "Москва": {
       "rocket": false,
@@ -138,7 +138,7 @@
       "droneDanger": false
     },
     "Татарстан": {
-      "rocket": true,
+      "rocket": false,
       "droneAlert": false,
       "droneDanger": false
     },
