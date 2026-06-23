@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-23T19:02:36.619522+00:00",
+  "last_updated": "2026-06-23T19:06:28.963086+00:00",
   "regions": {
     "Москва": {
       "rocket": false,
@@ -135,7 +135,7 @@
       "rocket": false,
       "droneAlert": true,
       "droneDanger": false,
-      "droneAlert_time": "2026-06-23T19:01:55.405780+00:00"
+      "droneAlert_time": "2026-06-23T19:05:44.939581+00:00"
     },
     "Татарстан": {
       "rocket": false,
@@ -276,7 +276,7 @@
       "rocket": false,
       "droneAlert": true,
       "droneDanger": false,
-      "droneAlert_time": "2026-06-23T19:01:55.404597+00:00"
+      "droneAlert_time": "2026-06-23T19:05:44.938237+00:00"
     },
     "Дагестан": {
       "rocket": false,
