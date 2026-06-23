@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-23T07:16:04.653443+00:00",
+  "last_updated": "2026-06-23T07:21:13.443938+00:00",
   "regions": {
     "Москва": {
       "rocket": false,
@@ -27,7 +27,7 @@
       "droneDanger": true
     },
     "Владимирская область": {
-      "rocket": false,
+      "rocket": true,
       "droneAlert": false,
       "droneDanger": true
     },
@@ -37,7 +37,7 @@
       "droneDanger": true
     },
     "Ивановская область": {
-      "rocket": false,
+      "rocket": true,
       "droneAlert": false,
       "droneDanger": true
     },
@@ -151,7 +151,7 @@
     "Марий Эл": {
       "rocket": true,
       "droneAlert": false,
-      "droneDanger": false
+      "droneDanger": true
     },
     "Чувашия": {
       "rocket": true,
