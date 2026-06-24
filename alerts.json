@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-24T05:11:30.739333+00:00",
+  "last_updated": "2026-06-24T05:16:33.179629+00:00",
   "regions": {
     "Москва": {
       "rocket": false,
@@ -67,7 +67,7 @@
       "rocket": false,
       "droneAlert": true,
       "droneDanger": false,
-      "droneAlert_time": "2026-06-24T05:10:47.998894+00:00"
+      "droneAlert_time": "2026-06-24T05:15:43.920004+00:00"
     },
     "Новгородская область": {
       "rocket": false,
@@ -150,7 +150,7 @@
     "Башкортостан": {
       "rocket": false,
       "droneAlert": false,
-      "droneDanger": true
+      "droneDanger": false
     },
     "Марий Эл": {
       "rocket": false,
