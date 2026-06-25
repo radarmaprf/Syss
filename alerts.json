@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-25T14:17:30.023045+00:00",
+  "last_updated": "2026-06-25T14:23:02.239466+00:00",
   "regions": {
     "Москва": {
       "rocket": false,
@@ -67,7 +67,7 @@
       "droneDanger": false
     },
     "Новгородская область": {
-      "rocket": false,
+      "rocket": true,
       "droneAlert": false,
       "droneDanger": false
     },
@@ -77,7 +77,7 @@
       "droneDanger": false
     },
     "Пензенская область": {
-      "rocket": true,
+      "rocket": false,
       "droneAlert": false,
       "droneDanger": false
     },
@@ -92,7 +92,7 @@
       "droneDanger": false
     },
     "Смоленская область": {
-      "rocket": false,
+      "rocket": true,
       "droneAlert": false,
       "droneDanger": false
     },
@@ -102,7 +102,7 @@
       "droneDanger": false
     },
     "Тверская область": {
-      "rocket": false,
+      "rocket": true,
       "droneAlert": false,
       "droneDanger": false
     },
@@ -143,9 +143,8 @@
     },
     "Башкортостан": {
       "rocket": false,
-      "droneAlert": true,
-      "droneDanger": false,
-      "droneAlert_time": "2026-06-25T14:15:56.938129+00:00"
+      "droneAlert": false,
+      "droneDanger": false
     },
     "Марий Эл": {
       "rocket": false,
@@ -165,7 +164,7 @@
     "Удмуртская Республика": {
       "rocket": false,
       "droneAlert": false,
-      "droneDanger": true
+      "droneDanger": false
     },
     "Самарская область": {
       "rocket": false,
@@ -173,7 +172,7 @@
       "droneDanger": false
     },
     "Саратовская область": {
-      "rocket": true,
+      "rocket": false,
       "droneAlert": false,
       "droneDanger": false
     },
@@ -185,12 +184,12 @@
     "Свердловская область": {
       "rocket": false,
       "droneAlert": false,
-      "droneDanger": true
+      "droneDanger": false
     },
     "Челябинская область": {
       "rocket": false,
       "droneAlert": false,
-      "droneDanger": true
+      "droneDanger": false
     },
     "Оренбургская область": {
       "rocket": false,
@@ -200,7 +199,7 @@
     "Пермский край": {
       "rocket": false,
       "droneAlert": false,
-      "droneDanger": true
+      "droneDanger": false
     },
     "Новосибирская область": {
       "rocket": false,
@@ -274,8 +273,9 @@
     },
     "Крым": {
       "rocket": false,
-      "droneAlert": false,
-      "droneDanger": true
+      "droneAlert": true,
+      "droneDanger": false,
+      "droneAlert_time": "2026-06-25T14:20:55.349573+00:00"
     },
     "Дагестан": {
       "rocket": false,
@@ -300,7 +300,7 @@
     "ХМАО": {
       "rocket": false,
       "droneAlert": false,
-      "droneDanger": true
+      "droneDanger": false
     },
     "ЯНАО": {
       "rocket": false,
