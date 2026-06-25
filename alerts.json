@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-25T22:57:06.392073+00:00",
+  "last_updated": "2026-06-25T23:00:04.822099+00:00",
   "regions": {
     "Москва": {
       "rocket": false,
@@ -58,7 +58,7 @@
       "droneDanger": true
     },
     "Липецкая область": {
-      "rocket": false,
+      "rocket": true,
       "droneAlert": true,
       "droneDanger": false,
       "droneAlert_time": "2026-06-25T22:45:51.642680+00:00"
@@ -74,9 +74,10 @@
       "droneDanger": false
     },
     "Орловская область": {
-      "rocket": false,
-      "droneAlert": false,
-      "droneDanger": true
+      "rocket": true,
+      "droneAlert": true,
+      "droneDanger": false,
+      "droneAlert_time": "2026-06-25T22:58:07.024345+00:00"
     },
     "Пензенская область": {
       "rocket": false,
@@ -96,7 +97,7 @@
     "Смоленская область": {
       "rocket": false,
       "droneAlert": false,
-      "droneDanger": true
+      "droneDanger": false
     },
     "Тамбовская область": {
       "rocket": false,
@@ -109,7 +110,7 @@
       "droneDanger": false
     },
     "Тульская область": {
-      "rocket": false,
+      "rocket": true,
       "droneAlert": false,
       "droneDanger": true
     },
@@ -313,7 +314,7 @@
     "Адыгея": {
       "rocket": false,
       "droneAlert": false,
-      "droneDanger": true
+      "droneDanger": false
     }
   }
 }
