@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-27T06:56:34.737544+00:00",
+  "last_updated": "2026-06-27T07:01:56.471315+00:00",
   "regions": {
     "Москва": {
       "rocket": false,
@@ -66,7 +66,7 @@
       "rocket": false,
       "droneAlert": true,
       "droneDanger": false,
-      "droneAlert_time": "2026-06-27T06:55:39.543884+00:00"
+      "droneAlert_time": "2026-06-27T07:01:00.879900+00:00"
     },
     "Новгородская область": {
       "rocket": false,
@@ -97,7 +97,7 @@
     "Смоленская область": {
       "rocket": false,
       "droneAlert": false,
-      "droneDanger": true
+      "droneDanger": false
     },
     "Тамбовская область": {
       "rocket": false,
