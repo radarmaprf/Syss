@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-28T21:22:58.691179+00:00",
+  "last_updated": "2026-06-28T21:27:57.686546+00:00",
   "regions": {
     "Москва": {
       "rocket": false,
@@ -45,7 +45,7 @@
       "rocket": false,
       "droneAlert": true,
       "droneDanger": false,
-      "droneAlert_time": "2026-06-28T21:20:49.000508+00:00"
+      "droneAlert_time": "2026-06-28T21:25:38.758656+00:00"
     },
     "Костромская область": {
       "rocket": false,
@@ -58,7 +58,7 @@
       "droneDanger": true
     },
     "Липецкая область": {
-      "rocket": false,
+      "rocket": true,
       "droneAlert": false,
       "droneDanger": false
     },
@@ -76,7 +76,7 @@
       "rocket": true,
       "droneAlert": true,
       "droneDanger": false,
-      "droneAlert_time": "2026-06-28T21:20:48.999031+00:00"
+      "droneAlert_time": "2026-06-28T21:25:38.757258+00:00"
     },
     "Пензенская область": {
       "rocket": false,
@@ -97,7 +97,7 @@
       "rocket": false,
       "droneAlert": true,
       "droneDanger": false,
-      "droneAlert_time": "2026-06-28T21:20:49.000748+00:00"
+      "droneAlert_time": "2026-06-28T21:25:38.758864+00:00"
     },
     "Тамбовская область": {
       "rocket": false,
@@ -108,10 +108,10 @@
       "rocket": false,
       "droneAlert": true,
       "droneDanger": false,
-      "droneAlert_time": "2026-06-28T21:20:49.000076+00:00"
+      "droneAlert_time": "2026-06-28T21:25:38.758232+00:00"
     },
     "Тульская область": {
-      "rocket": false,
+      "rocket": true,
       "droneAlert": false,
       "droneDanger": false
     },
@@ -134,7 +134,7 @@
       "rocket": false,
       "droneAlert": true,
       "droneDanger": false,
-      "droneAlert_time": "2026-06-28T21:20:48.999458+00:00"
+      "droneAlert_time": "2026-06-28T21:25:38.757681+00:00"
     },
     "Волгоградская область": {
       "rocket": false,
@@ -280,7 +280,7 @@
       "rocket": false,
       "droneAlert": true,
       "droneDanger": false,
-      "droneAlert_time": "2026-06-28T21:20:49.000279+00:00"
+      "droneAlert_time": "2026-06-28T21:25:38.758425+00:00"
     },
     "Дагестан": {
       "rocket": false,
