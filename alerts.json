@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-28T21:53:05.202585+00:00",
+  "last_updated": "2026-06-28T21:58:05.787109+00:00",
   "regions": {
     "Москва": {
       "rocket": false,
@@ -45,7 +45,7 @@
       "rocket": false,
       "droneAlert": true,
       "droneDanger": false,
-      "droneAlert_time": "2026-06-28T21:50:50.219705+00:00"
+      "droneAlert_time": "2026-06-28T21:55:38.659576+00:00"
     },
     "Костромская область": {
       "rocket": false,
@@ -58,7 +58,7 @@
       "droneDanger": true
     },
     "Липецкая область": {
-      "rocket": true,
+      "rocket": false,
       "droneAlert": false,
       "droneDanger": false
     },
@@ -76,7 +76,7 @@
       "rocket": true,
       "droneAlert": true,
       "droneDanger": false,
-      "droneAlert_time": "2026-06-28T21:50:50.218277+00:00"
+      "droneAlert_time": "2026-06-28T21:55:38.658133+00:00"
     },
     "Пензенская область": {
       "rocket": false,
@@ -97,7 +97,7 @@
       "rocket": false,
       "droneAlert": true,
       "droneDanger": false,
-      "droneAlert_time": "2026-06-28T21:50:50.219921+00:00"
+      "droneAlert_time": "2026-06-28T21:55:38.659817+00:00"
     },
     "Тамбовская область": {
       "rocket": false,
@@ -108,7 +108,7 @@
       "rocket": false,
       "droneAlert": true,
       "droneDanger": false,
-      "droneAlert_time": "2026-06-28T21:50:50.219272+00:00"
+      "droneAlert_time": "2026-06-28T21:55:38.659150+00:00"
     },
     "Тульская область": {
       "rocket": true,
@@ -134,7 +134,7 @@
       "rocket": false,
       "droneAlert": true,
       "droneDanger": false,
-      "droneAlert_time": "2026-06-28T21:50:50.218719+00:00"
+      "droneAlert_time": "2026-06-28T21:55:38.658560+00:00"
     },
     "Волгоградская область": {
       "rocket": false,
@@ -280,7 +280,7 @@
       "rocket": false,
       "droneAlert": true,
       "droneDanger": false,
-      "droneAlert_time": "2026-06-28T21:50:50.219468+00:00"
+      "droneAlert_time": "2026-06-28T21:55:38.659350+00:00"
     },
     "Дагестан": {
       "rocket": false,
