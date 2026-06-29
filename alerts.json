@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-29T16:32:21.587936+00:00",
+  "last_updated": "2026-06-29T16:37:05.531325+00:00",
   "regions": {
     "Москва": {
       "rocket": false,
@@ -113,7 +113,7 @@
       "rocket": false,
       "droneAlert": true,
       "droneDanger": false,
-      "droneAlert_time": "2026-06-29T16:30:56.798859+00:00"
+      "droneAlert_time": "2026-06-29T16:35:42.462916+00:00"
     },
     "Ярославская область": {
       "rocket": false,
@@ -124,7 +124,7 @@
       "rocket": false,
       "droneAlert": true,
       "droneDanger": false,
-      "droneAlert_time": "2026-06-29T16:30:56.798632+00:00"
+      "droneAlert_time": "2026-06-29T16:35:42.462672+00:00"
     },
     "Ставропольский край": {
       "rocket": false,
