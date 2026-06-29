@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-29T15:16:14.910900+00:00",
+  "last_updated": "2026-06-29T15:21:33.035030+00:00",
   "regions": {
     "Москва": {
       "rocket": false,
@@ -168,7 +168,7 @@
       "droneDanger": false
     },
     "Самарская область": {
-      "rocket": false,
+      "rocket": true,
       "droneAlert": false,
       "droneDanger": false
     },
@@ -178,7 +178,7 @@
       "droneDanger": false
     },
     "Ульяновская область": {
-      "rocket": false,
+      "rocket": true,
       "droneAlert": false,
       "droneDanger": false
     },
