@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-30T07:26:47.086706+00:00",
+  "last_updated": "2026-06-30T07:32:15.164797+00:00",
   "regions": {
     "Москва": {
       "rocket": false,
@@ -32,7 +32,7 @@
       "droneDanger": false
     },
     "Воронежская область": {
-      "rocket": true,
+      "rocket": false,
       "droneAlert": true,
       "droneDanger": false,
       "droneAlert_time": "2026-06-30T07:15:44.385217+00:00"
@@ -44,9 +44,8 @@
     },
     "Калужская область": {
       "rocket": false,
-      "droneAlert": true,
-      "droneDanger": false,
-      "droneAlert_time": "2026-06-30T07:05:36.802233+00:00"
+      "droneAlert": false,
+      "droneDanger": true
     },
     "Костромская область": {
       "rocket": false,
@@ -75,15 +74,16 @@
       "droneDanger": false
     },
     "Орловская область": {
-      "rocket": true,
+      "rocket": false,
       "droneAlert": true,
       "droneDanger": false,
       "droneAlert_time": "2026-06-30T07:05:36.803835+00:00"
     },
     "Пензенская область": {
       "rocket": false,
-      "droneAlert": false,
-      "droneDanger": true
+      "droneAlert": true,
+      "droneDanger": false,
+      "droneAlert_time": "2026-06-30T07:30:58.756270+00:00"
     },
     "Псковская область": {
       "rocket": false,
@@ -105,7 +105,7 @@
       "rocket": false,
       "droneAlert": true,
       "droneDanger": false,
-      "droneAlert_time": "2026-06-30T07:25:37.837015+00:00"
+      "droneAlert_time": "2026-06-30T07:30:58.756008+00:00"
     },
     "Тверская область": {
       "rocket": false,
@@ -145,7 +145,7 @@
       "rocket": false,
       "droneAlert": true,
       "droneDanger": false,
-      "droneAlert_time": "2026-06-30T07:25:37.835804+00:00"
+      "droneAlert_time": "2026-06-30T07:30:58.754804+00:00"
     },
     "Татарстан": {
       "rocket": false,
@@ -321,7 +321,7 @@
       "rocket": false,
       "droneAlert": true,
       "droneDanger": false,
-      "droneAlert_time": "2026-06-30T07:25:37.835745+00:00"
+      "droneAlert_time": "2026-06-30T07:30:58.754725+00:00"
     }
   }
 }
