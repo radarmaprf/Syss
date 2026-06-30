@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-30T22:25:38.128381+00:00",
+  "last_updated": "2026-06-30T22:31:15.338676+00:00",
   "regions": {
     "Москва": {
       "rocket": false,
@@ -137,9 +137,8 @@
     },
     "Волгоградская область": {
       "rocket": false,
-      "droneAlert": true,
-      "droneDanger": false,
-      "droneAlert_time": "2026-06-30T21:50:32.899995+00:00"
+      "droneAlert": false,
+      "droneDanger": true
     },
     "Татарстан": {
       "rocket": false,
