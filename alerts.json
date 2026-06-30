@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-30T04:41:52.577251+00:00",
+  "last_updated": "2026-06-30T04:47:09.791692+00:00",
   "regions": {
     "Москва": {
       "rocket": false,
@@ -51,7 +51,7 @@
     "Костромская область": {
       "rocket": false,
       "droneAlert": false,
-      "droneDanger": false
+      "droneDanger": true
     },
     "Курская область": {
       "rocket": false,
@@ -129,14 +129,15 @@
     },
     "Ставропольский край": {
       "rocket": false,
-      "droneAlert": false,
-      "droneDanger": false
+      "droneAlert": true,
+      "droneDanger": false,
+      "droneAlert_time": "2026-06-30T04:45:42.938234+00:00"
     },
     "Ростовская область": {
       "rocket": false,
       "droneAlert": true,
       "droneDanger": false,
-      "droneAlert_time": "2026-06-30T04:40:50.226772+00:00"
+      "droneAlert_time": "2026-06-30T04:45:42.937827+00:00"
     },
     "Волгоградская область": {
       "rocket": false,
@@ -161,7 +162,7 @@
     "Чувашия": {
       "rocket": false,
       "droneAlert": false,
-      "droneDanger": false
+      "droneDanger": true
     },
     "Республика Мордовия": {
       "rocket": false,
@@ -181,12 +182,12 @@
     "Саратовская область": {
       "rocket": false,
       "droneAlert": false,
-      "droneDanger": false
+      "droneDanger": true
     },
     "Ульяновская область": {
       "rocket": false,
       "droneAlert": false,
-      "droneDanger": false
+      "droneDanger": true
     },
     "Свердловская область": {
       "rocket": false,
@@ -316,8 +317,9 @@
     },
     "Адыгея": {
       "rocket": false,
-      "droneAlert": false,
-      "droneDanger": true
+      "droneAlert": true,
+      "droneDanger": false,
+      "droneAlert_time": "2026-06-30T04:45:42.938238+00:00"
     }
   }
 }
