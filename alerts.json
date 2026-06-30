@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-30T19:46:09.571703+00:00",
+  "last_updated": "2026-06-30T19:51:21.347656+00:00",
   "regions": {
     "Москва": {
       "rocket": false,
@@ -46,7 +46,7 @@
       "rocket": false,
       "droneAlert": true,
       "droneDanger": false,
-      "droneAlert_time": "2026-06-30T19:45:41.832724+00:00"
+      "droneAlert_time": "2026-06-30T19:50:53.689226+00:00"
     },
     "Костромская область": {
       "rocket": false,
@@ -76,9 +76,8 @@
     },
     "Орловская область": {
       "rocket": false,
-      "droneAlert": true,
-      "droneDanger": false,
-      "droneAlert_time": "2026-06-30T18:45:48.692321+00:00"
+      "droneAlert": false,
+      "droneDanger": true
     },
     "Пензенская область": {
       "rocket": false,
@@ -289,7 +288,7 @@
     "Дагестан": {
       "rocket": false,
       "droneAlert": false,
-      "droneDanger": false
+      "droneDanger": true
     },
     "Республика Карелия": {
       "rocket": false,
