@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-01T03:05:50.560216+00:00",
+  "last_updated": "2026-07-01T03:11:25.697472+00:00",
   "regions": {
     "Москва": {
       "rocket": false,
@@ -149,12 +149,12 @@
     "Марий Эл": {
       "rocket": false,
       "droneAlert": false,
-      "droneDanger": true
+      "droneDanger": false
     },
     "Чувашия": {
       "rocket": false,
       "droneAlert": false,
-      "droneDanger": true
+      "droneDanger": false
     },
     "Республика Мордовия": {
       "rocket": false,
@@ -194,7 +194,7 @@
     "Оренбургская область": {
       "rocket": true,
       "droneAlert": false,
-      "droneDanger": false
+      "droneDanger": true
     },
     "Пермский край": {
       "rocket": false,
