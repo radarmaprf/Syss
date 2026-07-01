@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-01T23:31:57.885158+00:00",
+  "last_updated": "2026-07-01T23:36:45.361295+00:00",
   "regions": {
     "Москва": {
       "rocket": false,
@@ -65,8 +65,9 @@
     },
     "Нижегородская область": {
       "rocket": false,
-      "droneAlert": false,
-      "droneDanger": false
+      "droneAlert": true,
+      "droneDanger": false,
+      "droneAlert_time": "2026-07-01T23:35:40.636356+00:00"
     },
     "Новгородская область": {
       "rocket": false,
@@ -180,7 +181,7 @@
     "Саратовская область": {
       "rocket": false,
       "droneAlert": false,
-      "droneDanger": false
+      "droneDanger": true
     },
     "Ульяновская область": {
       "rocket": false,
