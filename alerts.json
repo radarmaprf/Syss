@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-01T02:56:10.386843+00:00",
+  "last_updated": "2026-07-01T03:01:32.424978+00:00",
   "regions": {
     "Москва": {
       "rocket": false,
@@ -178,9 +178,8 @@
     },
     "Ульяновская область": {
       "rocket": false,
-      "droneAlert": true,
-      "droneDanger": false,
-      "droneAlert_time": "2026-07-01T02:35:36.115411+00:00"
+      "droneAlert": false,
+      "droneDanger": false
     },
     "Свердловская область": {
       "rocket": false,
