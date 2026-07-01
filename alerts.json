@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-01T09:03:20.849030+00:00",
+  "last_updated": "2026-07-01T09:07:38.431029+00:00",
   "regions": {
     "Москва": {
       "rocket": false,
@@ -161,7 +161,7 @@
       "rocket": false,
       "droneAlert": true,
       "droneDanger": false,
-      "droneAlert_time": "2026-07-01T09:01:12.794263+00:00"
+      "droneAlert_time": "2026-07-01T09:05:40.434777+00:00"
     },
     "Удмуртская Республика": {
       "rocket": false,
