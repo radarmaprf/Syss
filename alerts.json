@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-02T07:32:14.991612+00:00",
+  "last_updated": "2026-07-02T07:36:38.927103+00:00",
   "regions": {
     "Москва": {
       "rocket": false,
@@ -63,9 +63,8 @@
     },
     "Нижегородская область": {
       "rocket": false,
-      "droneAlert": true,
-      "droneDanger": false,
-      "droneAlert_time": "2026-07-02T07:31:04.523462+00:00"
+      "droneAlert": false,
+      "droneDanger": false
     },
     "Новгородская область": {
       "rocket": false,
@@ -160,9 +159,8 @@
     },
     "Республика Мордовия": {
       "rocket": false,
-      "droneAlert": true,
-      "droneDanger": false,
-      "droneAlert_time": "2026-07-02T07:20:53.507810+00:00"
+      "droneAlert": false,
+      "droneDanger": false
     },
     "Удмуртская Республика": {
       "rocket": false,
