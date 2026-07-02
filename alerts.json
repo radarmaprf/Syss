@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-02T08:46:36.909327+00:00",
+  "last_updated": "2026-07-02T08:51:58.556775+00:00",
   "regions": {
     "Москва": {
       "rocket": false,
@@ -119,8 +119,9 @@
     },
     "Краснодарский край": {
       "rocket": false,
-      "droneAlert": false,
-      "droneDanger": true
+      "droneAlert": true,
+      "droneDanger": false,
+      "droneAlert_time": "2026-07-02T08:50:56.437235+00:00"
     },
     "Ставропольский край": {
       "rocket": false,
@@ -274,8 +275,9 @@
     },
     "Крым": {
       "rocket": false,
-      "droneAlert": false,
-      "droneDanger": false
+      "droneAlert": true,
+      "droneDanger": false,
+      "droneAlert_time": "2026-07-02T08:50:56.437238+00:00"
     },
     "Дагестан": {
       "rocket": false,
